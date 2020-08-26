@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -116,12 +116,9 @@
 		0FB1690424F2FB9800C2F925 /* Filtr */ = {
 			isa = PBXGroup;
 			children = (
-				0FB1690524F2FB9800C2F925 /* AppDelegate.swift */,
-				0FB1690724F2FB9800C2F925 /* SceneDelegate.swift */,
+				0FBEDFAA24F3003D002293CF /* App */,
 				0FB1690924F2FB9800C2F925 /* ContentView.swift */,
-				0FB1690B24F2FB9B00C2F925 /* Assets.xcassets */,
-				0FB1691024F2FB9B00C2F925 /* LaunchScreen.storyboard */,
-				0FB1691324F2FB9B00C2F925 /* Info.plist */,
+				0FBEDFAD24F304BE002293CF /* Resources */,
 				0FB1690D24F2FB9B00C2F925 /* Preview Content */,
 			);
 			path = Filtr;
@@ -153,6 +150,25 @@
 			path = FiltrUITests;
 			sourceTree = "<group>";
 		};
+		0FBEDFAA24F3003D002293CF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0FB1690524F2FB9800C2F925 /* AppDelegate.swift */,
+				0FB1690724F2FB9800C2F925 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0FBEDFAD24F304BE002293CF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FB1690B24F2FB9B00C2F925 /* Assets.xcassets */,
+				0FB1691024F2FB9B00C2F925 /* LaunchScreen.storyboard */,
+				0FB1691324F2FB9B00C2F925 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D455AF62096AFD41853E65E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +179,6 @@
 				F22EB41EC3D73C92E3C7F64D /* Pods-FiltrTests.debug.xcconfig */,
 				6748EA2394F8F42A5E88F83D /* Pods-FiltrTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -188,6 +203,7 @@
 				0FB168FE24F2FB9800C2F925 /* Sources */,
 				0FB168FF24F2FB9800C2F925 /* Frameworks */,
 				0FB1690024F2FB9800C2F925 /* Resources */,
+				063D3067F19593B9AED627FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,6 +241,7 @@
 				0FB1691F24F2FB9B00C2F925 /* Sources */,
 				0FB1692024F2FB9B00C2F925 /* Frameworks */,
 				0FB1692124F2FB9B00C2F925 /* Resources */,
+				80F159CB91A0AB5BA4C91996 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,6 +324,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		063D3067F19593B9AED627FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Filtr/Pods-Filtr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Filtr/Pods-Filtr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Filtr/Pods-Filtr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80F159CB91A0AB5BA4C91996 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Filtr-FiltrUITests/Pods-Filtr-FiltrUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Filtr-FiltrUITests/Pods-Filtr-FiltrUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Filtr-FiltrUITests/Pods-Filtr-FiltrUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BF41ED353F4F7C2C12689B68 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -552,7 +603,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Filtr/Preview Content\"";
 				DEVELOPMENT_TEAM = CX8CEBC3DF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Filtr/Info.plist;
+				INFOPLIST_FILE = Filtr/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -573,7 +624,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Filtr/Preview Content\"";
 				DEVELOPMENT_TEAM = CX8CEBC3DF;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Filtr/Info.plist;
+				INFOPLIST_FILE = Filtr/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
