@@ -12,10 +12,11 @@ import CoreImage.CIFilterBuiltins
 
 struct ContentView: View {
     @State private var tapped = false
-    @State private var searchText = ""
+    @ObservedObject private var searchText = TextBindingManager()
     
     @State private var image = Image("beach")
     @State private var revertIsDisabled = true
+    @State private var isShowingUnsplash = false
     
     var body: some View {
         return ZStack {
@@ -23,13 +24,14 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 HStack {
-                    CustomTextField(placeholder: Text("Faça sua pesquisa").foregroundColor(.white), searchText: $searchText)
+                    CustomTextField(placeholder: Text("Faça sua pesquisa").foregroundColor(.white), searchText: $searchText.text)
                     Button(action: {
                         self.tapped = true
-                        print(self.tapped)
+                        self.isShowingUnsplash = true
                     }) {
                         Text("Buscar")
                             .foregroundColor(.white)
+                            .fontWeight(.bold)
                     }
                 }.padding(.horizontal)
                 Spacer()
@@ -44,7 +46,7 @@ struct ContentView: View {
                     }) {
                         Image(systemName: "arrow.counterclockwise")
                             .font(.custom("", size: 22))
-                            .foregroundColor(self.revertIsDisabled ? .gray : .black)
+                            .foregroundColor(self.revertIsDisabled ? .gray : .white)
                     }.disabled(revertIsDisabled)
                     Spacer()
                     Button(action: {
@@ -57,10 +59,14 @@ struct ContentView: View {
                     }.disabled(!revertIsDisabled)
                 }.padding(.horizontal)
             }
+        }.sheet(isPresented: $isShowingUnsplash) {
+            UnsplashController(searchText: self.searchText.text)
         }
     }
-    
-    func applyEffect() {
+}
+
+extension ContentView {
+    private func applyEffect() {
         guard let inputImage = UIImage(named: "beach") else { return }
         let beginImage = CIImage(image: inputImage)
         
@@ -75,20 +81,6 @@ struct ContentView: View {
         if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
             let uiImage = UIImage(cgImage: cgimg)
             image = Image(uiImage: uiImage)
-        }
-    }
-}
-
-struct CustomTextField: View {
-    var placeholder: Text
-    @Binding var searchText: String
-    var editingChanged: (Bool) -> () = { _ in }
-    var commit: () -> () = { }
-    
-    var body: some View {
-        ZStack(alignment: .leading) {
-            if searchText.isEmpty { placeholder }
-            TextField("", text: $searchText, onEditingChanged: editingChanged, onCommit: commit)
         }
     }
 }
