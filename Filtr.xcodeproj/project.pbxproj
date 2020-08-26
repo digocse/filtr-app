@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B111B2D286718CDA3B9C89A /* Pods_Filtr_FiltrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECEA5EF38FDA9BD7E01BAC4 /* Pods_Filtr_FiltrUITests.framework */; };
+		0F3F55B524F634AF00350B56 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F55B424F634AF00350B56 /* AppConfiguration.swift */; };
 		0FB1690624F2FB9800C2F925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1690524F2FB9800C2F925 /* AppDelegate.swift */; };
 		0FB1690824F2FB9800C2F925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1690724F2FB9800C2F925 /* SceneDelegate.swift */; };
 		0FB1690A24F2FB9800C2F925 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1690924F2FB9800C2F925 /* ContentView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F3F55B424F634AF00350B56 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		0FB1690224F2FB9800C2F925 /* Filtr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filtr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB1690524F2FB9800C2F925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FB1690724F2FB9800C2F925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				0FB1690524F2FB9800C2F925 /* AppDelegate.swift */,
 				0FB1690724F2FB9800C2F925 /* SceneDelegate.swift */,
+				0F3F55B424F634AF00350B56 /* AppConfiguration.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			files = (
 				0FB1690624F2FB9800C2F925 /* AppDelegate.swift in Sources */,
 				0FB1690824F2FB9800C2F925 /* SceneDelegate.swift in Sources */,
+				0F3F55B524F634AF00350B56 /* AppConfiguration.swift in Sources */,
 				0FB1690A24F2FB9800C2F925 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +602,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E78D109878E811F56B3C2BF /* Pods-Filtr.debug.xcconfig */;
 			buildSettings = {
+				API_URL = "https://api.unsplash.com";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Filtr/Preview Content\"";
@@ -612,6 +617,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				UNSPLASH_ACCESS_KEY = uv7Jb6UUMS_waxejVlgy0bk5w4pfvxi34Yy8nTsTsGc;
+				UNSPLASH_SECRET_KEY = 0HzNDI098xjAkpNP7R02xP1V339TZwjk3a6bbbwpvz4;
 			};
 			name = Debug;
 		};
@@ -619,6 +626,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA00CE7CCEFB89BDA44E0EFB /* Pods-Filtr.release.xcconfig */;
 			buildSettings = {
+				API_URL = "https://api.unsplash.com";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Filtr/Preview Content\"";
@@ -633,6 +641,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				UNSPLASH_ACCESS_KEY = uv7Jb6UUMS_waxejVlgy0bk5w4pfvxi34Yy8nTsTsGc;
+				UNSPLASH_SECRET_KEY = 0HzNDI098xjAkpNP7R02xP1V339TZwjk3a6bbbwpvz4;
 			};
 			name = Release;
 		};
