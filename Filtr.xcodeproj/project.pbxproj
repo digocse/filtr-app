@@ -13,6 +13,7 @@
 		0F0AF20D24F70332008EEEDB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0AF20C24F70332008EEEDB /* CustomTextField.swift */; };
 		0F3F55B524F634AF00350B56 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F55B424F634AF00350B56 /* AppConfiguration.swift */; };
 		0F3F55B724F638F300350B56 /* UnsplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F55B624F638F300350B56 /* UnsplashController.swift */; };
+		0F41D06424F8128C00DC935A /* UnsplashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41D06324F8128C00DC935A /* UnsplashManager.swift */; };
 		0FB1690624F2FB9800C2F925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1690524F2FB9800C2F925 /* AppDelegate.swift */; };
 		0FB1690824F2FB9800C2F925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1690724F2FB9800C2F925 /* SceneDelegate.swift */; };
 		0FB1690A24F2FB9800C2F925 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1690924F2FB9800C2F925 /* ContentView.swift */; };
@@ -48,6 +49,7 @@
 		0F0AF20C24F70332008EEEDB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0F3F55B424F634AF00350B56 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		0F3F55B624F638F300350B56 /* UnsplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashController.swift; sourceTree = "<group>"; };
+		0F41D06324F8128C00DC935A /* UnsplashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashManager.swift; sourceTree = "<group>"; };
 		0FB1690224F2FB9800C2F925 /* Filtr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filtr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB1690524F2FB9800C2F925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FB1690724F2FB9800C2F925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 			path = ReusableViews;
 			sourceTree = "<group>";
 		};
+		0F0AF20E24F75FDD008EEEDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F41D06324F8128C00DC935A /* UnsplashManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0FB168F924F2FB9800C2F925 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				0FBEDFAA24F3003D002293CF /* App */,
+				0F0AF20E24F75FDD008EEEDB /* Model */,
 				0F0AF20424F6F2B4008EEEDB /* View */,
 				0F0AF20524F6F2D2008EEEDB /* Controller */,
 				0F0AF20624F6FFB8008EEEDB /* Utils */,
@@ -485,6 +496,7 @@
 				0F0AF20D24F70332008EEEDB /* CustomTextField.swift in Sources */,
 				0F3F55B724F638F300350B56 /* UnsplashController.swift in Sources */,
 				0FB1690A24F2FB9800C2F925 /* ContentView.swift in Sources */,
+				0F41D06424F8128C00DC935A /* UnsplashManager.swift in Sources */,
 				0F0AF20B24F701CD008EEEDB /* ClearButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

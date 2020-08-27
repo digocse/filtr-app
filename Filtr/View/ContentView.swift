@@ -11,12 +11,12 @@ import CoreImage
 import CoreImage.CIFilterBuiltins
 
 struct ContentView: View {
-    @State private var tapped = false
-    @ObservedObject private var searchText = TextBindingManager()
-    
-    @State private var image = Image("beach")
+    @State private var image = Image("smile")
+    @State private var selectedImage = UIImage(named: "smile")
     @State private var revertIsDisabled = true
     @State private var isShowingUnsplash = false
+    
+    @ObservedObject private var searchText = TextBindingManager()
     
     var body: some View {
         return ZStack {
@@ -26,7 +26,7 @@ struct ContentView: View {
                 HStack {
                     CustomTextField(placeholder: Text("Faça sua pesquisa").foregroundColor(.white), searchText: $searchText.text)
                     Button(action: {
-                        self.tapped = true
+                        self.hideKeyboard()
                         self.isShowingUnsplash = true
                     }) {
                         Text("Buscar")
@@ -41,7 +41,7 @@ struct ContentView: View {
                 Spacer()
                 HStack {
                     Button(action: {
-                        self.image = Image("beach")
+                        self.loadImage()
                         self.revertIsDisabled = true
                     }) {
                         Image(systemName: "arrow.counterclockwise")
@@ -59,15 +59,20 @@ struct ContentView: View {
                     }.disabled(!revertIsDisabled)
                 }.padding(.horizontal)
             }
-        }.sheet(isPresented: $isShowingUnsplash) {
-            UnsplashController(searchText: self.searchText.text)
+        }.sheet(isPresented: $isShowingUnsplash, onDismiss: loadImage) {
+            UnsplashController(searchText: self.searchText.text, image: self.$selectedImage)
         }
     }
 }
 
 extension ContentView {
+    private func loadImage() {
+        guard let selectedImage = selectedImage else { return }
+        self.image = Image(uiImage: selectedImage)
+    }
+    
     private func applyEffect() {
-        guard let inputImage = UIImage(named: "beach") else { return }
+        guard let inputImage = self.selectedImage else { return }
         let beginImage = CIImage(image: inputImage)
         
         let context = CIContext()

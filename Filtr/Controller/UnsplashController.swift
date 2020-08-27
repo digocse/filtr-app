@@ -12,21 +12,46 @@ import UnsplashPhotoPicker
 struct UnsplashController:  UIViewControllerRepresentable {
     private let appConfiguration = AppConfiguration()
     private let searchText: String
+    private let manager: UnsplashManager
     
-    init(searchText: String) {
-        self.searchText = searchText
+    @Binding var image: UIImage?
+    
+    class Coordinator: NSObject, UnsplashPhotoPickerDelegate, UINavigationControllerDelegate {
+        var parent: UnsplashController
+        
+        init(_ parent: UnsplashController) {
+            self.parent = parent
+        }
+        
+        func unsplashPhotoPicker(_ photoPicker: UnsplashPhotoPicker, didSelectPhotos photos: [UnsplashPhoto]) {
+            guard let photo = photos.first else { return }
+            parent.manager.downloadPhoto(photo)
+        }
+        
+        func unsplashPhotoPickerDidCancel(_ photoPicker: UnsplashPhotoPicker) { }
     }
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<UnsplashController>) -> UIViewController {
+    init(searchText: String, image selectedImage: Binding<UIImage?>) {
+        self.searchText = searchText
+        self._image = selectedImage
+        self.manager = UnsplashManager(searchText: self.searchText, image: self._image)
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<UnsplashController>) -> UnsplashPhotoPicker {
         let configuration = UnsplashPhotoPickerConfiguration(
-        accessKey: self.appConfiguration.unsplashAccessKey,
-        secretKey: self.appConfiguration.unsplashSecretKey,
-        query: self.searchText)
+            accessKey: self.appConfiguration.unsplashAccessKey,
+            secretKey: self.appConfiguration.unsplashSecretKey,
+            query: self.searchText)
+        
         let unsplashController = UnsplashPhotoPicker(configuration: configuration)
+        
+        unsplashController.photoPickerDelegate = context.coordinator
         return unsplashController
     }
     
-    func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<UnsplashController>) {
-        
-    }
+    func updateUIViewController(_ uiViewController: UnsplashPhotoPicker, context: UIViewControllerRepresentableContext<UnsplashController>) { }
 }

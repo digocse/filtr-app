@@ -20,7 +20,7 @@ struct ClearButton: ViewModifier {
                     self.text = ""
                 }) {
                     Image(systemName: "delete.left")
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.white)
                 }.padding(.trailing, 48)
             }
         }
