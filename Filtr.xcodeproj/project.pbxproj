@@ -14,13 +14,19 @@
 		0F3F55B524F634AF00350B56 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F55B424F634AF00350B56 /* AppConfiguration.swift */; };
 		0F3F55B724F638F300350B56 /* UnsplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F55B624F638F300350B56 /* UnsplashController.swift */; };
 		0F41D06424F8128C00DC935A /* UnsplashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41D06324F8128C00DC935A /* UnsplashManager.swift */; };
+		0F41D06624F81B4B00DC935A /* UnsplashManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41D06524F81B4B00DC935A /* UnsplashManagerTests.swift */; };
+		0F41D06924F84B1400DC935A /* FauxUnsplashPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41D06824F84B1400DC935A /* FauxUnsplashPhoto.swift */; };
+		0F594F4324FAA88A007503D9 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F594F4224FAA88A007503D9 /* Stub.swift */; };
+		0F594F4524FAB1DA007503D9 /* FauxUnsplashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F594F4424FAB1DA007503D9 /* FauxUnsplashManager.swift */; };
+		0F594F4824FADE50007503D9 /* AppConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F594F4724FADE50007503D9 /* AppConfigurationTests.swift */; };
+		0F679C6C24F95C7B00D73740 /* UnsplashControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F679C6B24F95C7B00D73740 /* UnsplashControllerTests.swift */; };
+		0F679C7724F9DF1800D73740 /* unsplash-photo.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F679C7424F9DC8B00D73740 /* unsplash-photo.json */; };
 		0FB1690624F2FB9800C2F925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1690524F2FB9800C2F925 /* AppDelegate.swift */; };
 		0FB1690824F2FB9800C2F925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1690724F2FB9800C2F925 /* SceneDelegate.swift */; };
 		0FB1690A24F2FB9800C2F925 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1690924F2FB9800C2F925 /* ContentView.swift */; };
 		0FB1690C24F2FB9B00C2F925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB1690B24F2FB9B00C2F925 /* Assets.xcassets */; };
 		0FB1690F24F2FB9B00C2F925 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB1690E24F2FB9B00C2F925 /* Preview Assets.xcassets */; };
 		0FB1691224F2FB9B00C2F925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB1691024F2FB9B00C2F925 /* LaunchScreen.storyboard */; };
-		0FB1691D24F2FB9B00C2F925 /* FiltrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1691C24F2FB9B00C2F925 /* FiltrTests.swift */; };
 		0FB1692824F2FB9B00C2F925 /* FiltrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB1692724F2FB9B00C2F925 /* FiltrUITests.swift */; };
 		574C82EE0AB43516B1BE63C5 /* Pods_FiltrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A857BC2766FAFAD73DAF35 /* Pods_FiltrTests.framework */; };
 		B55B8B99405DC13482D80A2B /* Pods_Filtr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40850E5D1B9A3E0E613FEEB9 /* Pods_Filtr.framework */; };
@@ -50,6 +56,13 @@
 		0F3F55B424F634AF00350B56 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		0F3F55B624F638F300350B56 /* UnsplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashController.swift; sourceTree = "<group>"; };
 		0F41D06324F8128C00DC935A /* UnsplashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashManager.swift; sourceTree = "<group>"; };
+		0F41D06524F81B4B00DC935A /* UnsplashManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashManagerTests.swift; sourceTree = "<group>"; };
+		0F41D06824F84B1400DC935A /* FauxUnsplashPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FauxUnsplashPhoto.swift; sourceTree = "<group>"; };
+		0F594F4224FAA88A007503D9 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		0F594F4424FAB1DA007503D9 /* FauxUnsplashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FauxUnsplashManager.swift; sourceTree = "<group>"; };
+		0F594F4724FADE50007503D9 /* AppConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurationTests.swift; sourceTree = "<group>"; };
+		0F679C6B24F95C7B00D73740 /* UnsplashControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashControllerTests.swift; sourceTree = "<group>"; };
+		0F679C7424F9DC8B00D73740 /* unsplash-photo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "unsplash-photo.json"; sourceTree = "<group>"; };
 		0FB1690224F2FB9800C2F925 /* Filtr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filtr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB1690524F2FB9800C2F925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FB1690724F2FB9800C2F925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +72,6 @@
 		0FB1691124F2FB9B00C2F925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FB1691324F2FB9B00C2F925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FB1691824F2FB9B00C2F925 /* FiltrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiltrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FB1691C24F2FB9B00C2F925 /* FiltrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltrTests.swift; sourceTree = "<group>"; };
 		0FB1691E24F2FB9B00C2F925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FB1692324F2FB9B00C2F925 /* FiltrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiltrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB1692724F2FB9B00C2F925 /* FiltrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltrUITests.swift; sourceTree = "<group>"; };
@@ -145,6 +157,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0F41D06724F84B0600DC935A /* Fauxs */ = {
+			isa = PBXGroup;
+			children = (
+				0F41D06824F84B1400DC935A /* FauxUnsplashPhoto.swift */,
+				0F594F4424FAB1DA007503D9 /* FauxUnsplashManager.swift */,
+			);
+			path = Fauxs;
+			sourceTree = "<group>";
+		};
+		0F594F4124FAA87C007503D9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0F594F4224FAA88A007503D9 /* Stub.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0F594F4624FADE31007503D9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F594F4724FADE50007503D9 /* AppConfigurationTests.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0F679C7624F9DF0100D73740 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0F679C7424F9DC8B00D73740 /* unsplash-photo.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		0FB168F924F2FB9800C2F925 = {
 			isa = PBXGroup;
 			children = (
@@ -192,8 +237,13 @@
 		0FB1691B24F2FB9B00C2F925 /* FiltrTests */ = {
 			isa = PBXGroup;
 			children = (
-				0FB1691C24F2FB9B00C2F925 /* FiltrTests.swift */,
+				0F594F4624FADE31007503D9 /* App */,
+				0F594F4124FAA87C007503D9 /* Utils */,
+				0F679C7624F9DF0100D73740 /* Resources */,
+				0F41D06724F84B0600DC935A /* Fauxs */,
 				0FB1691E24F2FB9B00C2F925 /* Info.plist */,
+				0F41D06524F81B4B00DC935A /* UnsplashManagerTests.swift */,
+				0F679C6B24F95C7B00D73740 /* UnsplashControllerTests.swift */,
 			);
 			path = FiltrTests;
 			sourceTree = "<group>";
@@ -307,6 +357,8 @@
 				0FB1692524F2FB9B00C2F925 /* PBXTargetDependency */,
 			);
 			name = FiltrUITests;
+			packageProductDependencies = (
+			);
 			productName = FiltrUITests;
 			productReference = 0FB1692324F2FB9B00C2F925 /* FiltrUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -343,6 +395,8 @@
 				Base,
 			);
 			mainGroup = 0FB168F924F2FB9800C2F925;
+			packageReferences = (
+			);
 			productRefGroup = 0FB1690324F2FB9800C2F925 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -369,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F679C7724F9DF1800D73740 /* unsplash-photo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +560,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FB1691D24F2FB9B00C2F925 /* FiltrTests.swift in Sources */,
+				0F594F4824FADE50007503D9 /* AppConfigurationTests.swift in Sources */,
+				0F41D06924F84B1400DC935A /* FauxUnsplashPhoto.swift in Sources */,
+				0F594F4524FAB1DA007503D9 /* FauxUnsplashManager.swift in Sources */,
+				0F594F4324FAA88A007503D9 /* Stub.swift in Sources */,
+				0F679C6C24F95C7B00D73740 /* UnsplashControllerTests.swift in Sources */,
+				0F41D06624F81B4B00DC935A /* UnsplashManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

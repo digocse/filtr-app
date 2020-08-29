@@ -9,13 +9,18 @@
 import SwiftUI
 import UnsplashPhotoPicker
 
-struct UnsplashManager {
+protocol UnsplashManagerProtocol {
+    var image: UIImage? { get }
+    func downloadPhoto(_ photo: UnsplashPhoto)
+}
+
+struct UnsplashManager: UnsplashManagerProtocol {
     private let searchText: String
     @Binding var image: UIImage?
     
     private static var cache: URLCache = {
         let memoryCapacity = 50 * 1024 * 1024
-        let diskCapacity = 100 * 1024 * 1024
+        let diskCapacity = 100 * 1024 * 10240
         let diskPath = "unsplash"
         
         return URLCache(

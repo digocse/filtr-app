@@ -11,8 +11,8 @@ import CoreImage
 import CoreImage.CIFilterBuiltins
 
 struct ContentView: View {
-    @State private var image = Image("smile")
-    @State private var selectedImage = UIImage(named: "smile")
+    @State private var image = Image("bmw")
+    @State private var selectedImage = UIImage(named: "bmw")
     @State private var revertIsDisabled = true
     @State private var isShowingUnsplash = false
     
@@ -32,7 +32,7 @@ struct ContentView: View {
                         Text("Buscar")
                             .foregroundColor(.white)
                             .fontWeight(.bold)
-                    }
+                    }.accessibility(identifier: "SearchButton")
                 }.padding(.horizontal)
                 Spacer()
                 image
@@ -48,6 +48,7 @@ struct ContentView: View {
                             .font(.custom("", size: 22))
                             .foregroundColor(self.revertIsDisabled ? .gray : .white)
                     }.disabled(revertIsDisabled)
+                        .accessibility(identifier: "RevertButton")
                     Spacer()
                     Button(action: {
                         self.applyEffect()
@@ -57,10 +58,13 @@ struct ContentView: View {
                             .foregroundColor(self.revertIsDisabled ? .white : .gray)
                             .fontWeight(.bold)
                     }.disabled(!revertIsDisabled)
+                        .accessibility(identifier: "ApplyEffectButton")
                 }.padding(.horizontal)
             }
         }.sheet(isPresented: $isShowingUnsplash, onDismiss: loadImage) {
-            UnsplashController(searchText: self.searchText.text, image: self.$selectedImage)
+            UnsplashController(searchText: self.searchText.text,
+                               image: self.$selectedImage,
+                               manager: UnsplashManager(searchText: self.searchText.text, image: self.$selectedImage))
         }
     }
 }

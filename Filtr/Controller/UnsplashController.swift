@@ -12,7 +12,8 @@ import UnsplashPhotoPicker
 struct UnsplashController:  UIViewControllerRepresentable {
     private let appConfiguration = AppConfiguration()
     private let searchText: String
-    private let manager: UnsplashManager
+    internal var manager: UnsplashManagerProtocol = UnsplashManager(searchText: "",
+                                                                    image: .constant(UIImage(named: "bmw")))
     
     @Binding var image: UIImage?
     
@@ -31,10 +32,10 @@ struct UnsplashController:  UIViewControllerRepresentable {
         func unsplashPhotoPickerDidCancel(_ photoPicker: UnsplashPhotoPicker) { }
     }
     
-    init(searchText: String, image selectedImage: Binding<UIImage?>) {
+    init(searchText: String, image selectedImage: Binding<UIImage?>, manager: UnsplashManagerProtocol) {
         self.searchText = searchText
         self._image = selectedImage
-        self.manager = UnsplashManager(searchText: self.searchText, image: self._image)
+        self.manager = manager
     }
     
     func makeCoordinator() -> Coordinator {
@@ -47,10 +48,10 @@ struct UnsplashController:  UIViewControllerRepresentable {
             secretKey: self.appConfiguration.unsplashSecretKey,
             query: self.searchText)
         
-        let unsplashController = UnsplashPhotoPicker(configuration: configuration)
+        let unsplashPhotoPickerController = UnsplashPhotoPicker(configuration: configuration)
         
-        unsplashController.photoPickerDelegate = context.coordinator
-        return unsplashController
+        unsplashPhotoPickerController.photoPickerDelegate = context.coordinator
+        return unsplashPhotoPickerController
     }
     
     func updateUIViewController(_ uiViewController: UnsplashPhotoPicker, context: UIViewControllerRepresentableContext<UnsplashController>) { }
